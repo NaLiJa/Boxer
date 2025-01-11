@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class BXEmulatedMT32;
 
-/// \c BXEmulatedMT32Delegate defines delegate notification callbacks 
+/// `BXEmulatedMT32Delegate` defines delegate notification callbacks
 /// to handle information coming from the MT-32.
 @protocol BXEmulatedMT32Delegate <NSObject>
 

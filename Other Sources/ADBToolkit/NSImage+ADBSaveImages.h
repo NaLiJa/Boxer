@@ -36,12 +36,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL) saveToURL: (NSURL *)URL
           withType: (NSBitmapImageFileType)type
         properties: (NSDictionary<NSBitmapImageRepPropertyKey, id> *)properties
-             error: (out NSError **)outError;
+             error: (out NSError *__autoreleasing*)outError;
 
 /// Creates a .ICNS-format at the specified location. Returns @c YES on success, or @c NO and populates
 /// @c outError if there was an error (including that a file at the specified destination already exists.)
 - (BOOL) saveAsIconToURL: (NSURL *)URL
-                   error: (out NSError **)outError;
+                   error: (out NSError *__autoreleasing*)outError;
 
 @end
 

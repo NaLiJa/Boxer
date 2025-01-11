@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class BXEmulatedMT32;
 /// MT32Emu has a C++ callback class for handling emulated synth notifications.
-/// We implement a thin C++ wrapper that sends messages back to BXEmulatedMT32 for handling.
+/// We implement a thin C++ wrapper that sends messages back to `BXEmulatedMT32` for handling.
     class BXEmulatedMT32ReportHandler : public MT32Emu::ReportHandler
     {
     public:
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark Constants
 
 extern NSErrorDomain const BXEmulatedMT32ErrorDomain;
-/// Keys included in the error dictionary for \c BXEmulatedMT32MismatchedROMs errors.
+/// Keys included in the error dictionary for `BXEmulatedMT32MismatchedROMs` errors.
 /// These point to NSNumbers whose integer values represent the types of the respective ROMs.
 extern NSErrorUserInfoKey const BXMT32ControlROMTypeKey;
 extern NSErrorUserInfoKey const BXMT32PCMROMTypeKey;
@@ -89,9 +89,9 @@ typedef NS_OPTIONS(NSUInteger, BXMT32ROMType) {
 
 @protocol BXEmulatedMT32Delegate;
 
-/// \c BXEmulatedMT32 provides a \c BXMIDIDevice wrapper for the MUNT MT-32 emulator.
+/// `BXEmulatedMT32` provides a `BXMIDIDevice` wrapper for the MUNT MT-32 emulator.
 /// It takes an optional delegate to which it sends notifications of LCD display messages.
-/// Unlike the other \c BXMIDIDevice classes, this currently feeds audio output back into
+/// Unlike the other `BXMIDIDevice` classes, this currently feeds audio output back into
 /// DOSBox's own mixer.
 @interface BXEmulatedMT32 : NSObject <BXMIDIDevice, BXAudioSource>
 
@@ -110,12 +110,12 @@ typedef NS_OPTIONS(NSUInteger, BXMT32ROMType) {
 #pragma mark Helper class methods
 
 /// Returns the exact type of ROM at the specified URL: PCM/Control, MT32/CM32L.
-/// Returns \c BXMT32ROMTypeUnknown and populates \c outError if the type of ROM could
+/// Returns `BXMT32ROMTypeUnknown` and populates `outError` if the type of ROM could
 /// not be determined.
 + (BXMT32ROMType) typeOfROMAtURL: (NSURL *)URL error: (out NSError **)outError NS_REFINED_FOR_SWIFT;
 
 /// Returns whether the specified pair of ROMs is MT32 or CM32L.
-/// Returns \c BXMT32ROMTypeUnknown and populates \c outError if there was an error
+/// Returns `BXMT32ROMTypeUnknown` and populates `outError` if there was an error
 /// determining the types of the ROMs or if they are mismatched.
 + (BXMT32ROMType) typeOfROMPairWithControlROMURL: (NSURL *)controlROMURL
                                        PCMROMURL: (NSURL *)PCMROMURL

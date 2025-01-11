@@ -16,44 +16,28 @@ import Cocoa
 /// Non-ASCII characters will be drawn as empty space.
 class MT32LCDDisplay : NSTextField {
     /// The image containing glyph data for the pixel font.
-    private var pixelFont: NSImage {
-        return NSImage(named: "MT32ScreenDisplay/MT32LCDFontTemplate")!
-    }
+    private let pixelFont = NSImage(named: "MT32ScreenDisplay/MT32LCDFontTemplate")!
     
     /// The mask image to use for the LCD pixel grid.
     /// This will be drawn in for 20 character places.
-    private var pixelGrid: NSImage {
-        return NSImage(named: "MT32ScreenDisplay/MT32LCDGridTemplate")!
-    }
+    private let pixelGrid = NSImage(named: "MT32ScreenDisplay/MT32LCDGridTemplate")!
     
     /// The background color of the field.
-    private var screenColor: NSColor {
-        return NSColor(named: "MT32ScreenDisplay/screenColor")!
-    }
+    private let screenColor = NSColor(named: "MT32ScreenDisplay/screenColor")!
 
-    private var frameColor: NSColor {
-        return NSColor(named: "MT32ScreenDisplay/frameColor")!
-    }
+    private let frameColor = NSColor(named: "MT32ScreenDisplay/frameColor")!
 
     /// The background color of the LCD pixel grid.
-    private var gridColor: NSColor {
-        return NSColor(named: "MT32ScreenDisplay/gridColor")!
-    }
+    private let gridColor = NSColor(named: "MT32ScreenDisplay/gridColor")!
 
     /// The colour of lit LCD pixels upon the grid.
-    private var pixelColor: NSColor {
-        return NSColor(named: "MT32ScreenDisplay/pixelColor")!
-    }
+    private let pixelColor = NSColor(named: "MT32ScreenDisplay/pixelColor")!
     
     /// The inner shadow of the screen.
-    private var innerShadow: NSShadow {
-        return NSShadow(blurRadius: 10, offset: NSSize(width: 0, height: -2.0), color: NSColor(named: "MT32ScreenDisplay/innerShadowColor")!)
-    }
+    private let innerShadow = NSShadow(blurRadius: 10, offset: NSSize(width: 0, height: -2.0), color: NSColor(named: "MT32ScreenDisplay/innerShadowColor")!)
     
     /// The lighting effects applied on top of the screen.
-    private var screenLighting: NSGradient {
-        return NSGradient(colorsAndLocations: (NSColor(calibratedWhite: 1.0, alpha: 0.10), 0.0), (NSColor(calibratedWhite: 1.0, alpha: 0.07), 0.5), (NSColor.clear, 0.55))!
-    }
+    private let screenLighting = NSGradient(colorsAndLocations: (NSColor(calibratedWhite: 1.0, alpha: 0.10), 0.0), (NSColor(calibratedWhite: 1.0, alpha: 0.07), 0.5), (NSColor.clear, 0.55))!
     
     override func draw(_ dirtyRect: NSRect) {
         let charsToDisplay = stringValue.padding(toLength: 20, withPad: " ", startingAt: 0)

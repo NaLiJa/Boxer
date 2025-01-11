@@ -155,7 +155,7 @@
     NSSize canvasSize = NSMakeSize(ceil(size.width * self.previewDPI.width),
                                    ceil(size.height * self.previewDPI.height));
     
-    self._previewCanvas = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes: NULL
+    self._previewCanvas = [[[NSBitmapImageRep alloc] initWithBitmapDataPlanes: NULL
                                                                    pixelsWide: canvasSize.width
                                                                    pixelsHigh: canvasSize.height
                                                                 bitsPerSample: 8
@@ -164,7 +164,7 @@
                                                                      isPlanar: NO
                                                                colorSpaceName: NSDeviceRGBColorSpace
                                                                   bytesPerRow: 0
-                                                                 bitsPerPixel: 0];
+                                                                 bitsPerPixel: 0] bitmapImageRepByRetaggingWithColorSpace:NSColorSpace.sRGBColorSpace] ;
     
     //Wrap this in an NSImage so upstream contexts can display the preview easily.
     NSImage *preview = [[NSImage alloc] initWithSize: canvasSize];

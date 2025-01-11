@@ -341,14 +341,15 @@ extension URL {
         // reports `public.folder` as the UTI when the extension conforms to a more
         // specific UTI.
         let ext = pathExtension
-        if ext.count != 0 {
-            let utiForExt = UTType(filenameExtension: ext)
-            if let utiForExt,
-               utiForExt != reportedUTI,
-               utiForExt.conforms(to: comparisonUTI) {
-                return true
-            }
-        }
+		guard !ext.isEmpty else {
+			return false
+		}
+		let utiForExt = UTType(filenameExtension: ext)
+		if let utiForExt,
+		   utiForExt != reportedUTI,
+		   utiForExt.conforms(to: comparisonUTI) {
+			return true
+		}
         
         return false
     }
