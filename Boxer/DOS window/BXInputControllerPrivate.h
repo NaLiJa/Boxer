@@ -137,7 +137,7 @@ void _inputSourceChanged(CFNotificationCenterRef center,
 
 @interface BXInputController (BXKeyboardInputInternals)
 
-/// Resynchronises the DOS keyboard layout with the current OS X text-input source.
+/// Resynchronises the DOS keyboard layout with the current macOS text-input source.
 - (void) _syncKeyboardLayout;
 
 /// Resynchronises the current state of the Shift, Ctrl, Alt, CapsLock etc.
@@ -148,7 +148,7 @@ void _inputSourceChanged(CFNotificationCenterRef center,
 - (BXDOSKeyCode) _DOSKeyCodeForSystemKeyCode: (CGKeyCode)keyCode;
 
 /// Returns the DOS keycode constant that should be simulated when the specified
-/// OSX keycode is pressed along with the Fn key.
+/// macOS keycode is pressed along with the Fn key.
 - (BXDOSKeyCode) _simulatedNumpadKeyCodeForSystemKeyCode: (CGKeyCode)keyCode;
 
 /// Called whenever the emulated keyboard's numlock state changes.

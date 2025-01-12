@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-/// \c BXInputView tracks keyboard and mouse input and passes them to its BXInputController.
+/// `BXInputView` tracks keyboard and mouse input and passes them to its BXInputController.
 @interface BXInputView : NSView
 @end

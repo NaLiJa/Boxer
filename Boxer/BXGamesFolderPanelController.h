@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-/// BXGamesFolderPanelController displays the choose-a-game-folder open panel, and manages its
+/// `BXGamesFolderPanelController` displays the choose-a-game-folder open panel, and manages its
 /// accessory view. It is also responsible for adding sample games to the chosen folder, if requested.
 @interface BXGamesFolderPanelController : NSViewController <NSOpenSavePanelDelegate>
 

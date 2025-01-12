@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Properties
 
 /// The session whose documents are being displayed in the panel.
-// FIXME: This may be introducing a memory leak by holding a strong reference
-@property (strong, nonatomic, nullable) BXSession *session;
+@property (strong, nonatomic, nullable) BXSession *session; // FIXME: This may be introducing a memory leak by holding a strong reference
+
 
 /// Whether the panel is currently visible, either as a popover or as a window.
 @property (readonly, nonatomic, getter=isShown) BOOL shown;
@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// The maximum size we permit the popover to get.
 @property (assign, nonatomic) NSSize maxPopoverSize;
 
-/// Returns whether popovers are available. This will return NO on 10.6.
+/// Returns whether popovers are available. This will return `NO` on 10.6.
 @property (class, readonly) BOOL supportsPopover;
 
 
@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - Display methods
 
 /// Displays the documentation browser in a popover at the specified location.
-/// On 10.6, which does not support popovers, this will call displayInWindow instead.
+/// On 10.6, which does not support popovers, this will call `-displayInWindow` instead.
 - (void) displayForSession: (BXSession *)session
    inPopoverRelativeToRect: (NSRect)positioningRect
                     ofView: (NSView *)positioningView

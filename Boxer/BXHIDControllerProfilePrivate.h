@@ -73,10 +73,10 @@ extern NSString * const BXControllerProfileDPadDown;
 - (void) bindButtonElements: (NSArray<DDHidElement *> *)elements;
 - (void) bindPOVElements: (NSArray<DDHidElement *> *)elements;
 
-/// Called by \c bindAxisElements: to separate wheel-binding logic from regular axis binding.
+/// Called by `-bindAxisElements:` to separate wheel-binding logic from regular axis binding.
 - (void) bindAxisElementsForWheel: (NSArray<DDHidElement *> *)elements;
 
-/// Returns a \c BXHIDInputBinding to bind the specified element on the profile's HID controller
+/// Returns a `BXHIDInputBinding` to bind the specified element on the profile's HID controller
 /// to the profile's emulated joystick. Must return nil if the element should not be bound.
 /// Used by generateBindings and intended to be overridden by subclasses for individual bindings.
 - (id <BXHIDInputBinding>) generatedBindingForAxisElement: (DDHidElement *)element;
@@ -142,34 +142,34 @@ extern NSString * const BXControllerProfileDPadDown;
 #pragma mark Profile registration and matching
 
 /// Registers the specified profile subclass as a custom profile.
-/// Should be called in each subclass's +load method.
+/// Should be called in each subclass's `+load` method.
 + (void) registerProfile: (Class)profile;
 
 /// Returns whether the implementing class is suitable for the specified controller.
-/// Used by BXHIDControllerProfile profileClassForrDevice: to find custom
+/// Used by `+[BXHIDControllerProfile profileClassForrDevice:]` to find custom
 /// profile classes for known devices.
 /// Uses matchIDs by default, but can be overridden by subclasses to perform custom matching.
 + (BOOL) matchesDevice: (DDHidJoystick *)device;
 
-/// Returns the BXHIDControllerProfile subclass most suited for the specified device,
-/// falling back on BXHIDControllerProfile itself if none more suitable is found.
+/// Returns the `BXHIDControllerProfile` subclass most suited for the specified device,
+/// falling back on `BXHIDControllerProfile` itself if none more suitable is found.
 /// Should not be overridden.
 + (Class) profileClassForDevice: (DDHidJoystick *)device;
 
-/// Returns an array of NSDictionaries containing vendorID and usageID pairs,
-/// which this profile should match. Used by matchesDevice:.
-/// Returns an empty array by default, and is intended to be overridden by subclasses. 
+/// Returns an array of `NSDictionaries` containing *vendorID* and *usageID* pairs,
+/// which this profile should match. Used by `+matchesDevice:`.
+/// Returns an empty array by default, and is intended to be overridden by subclasses.
 + (NSArray<NSDictionary<NSString*,NSNumber*>*> *) matchedIDs;
 
-/// Helper method for generating match definitions. For use by subclasses overriding matchedIDs.
+/// Helper method for generating match definitions. For use by subclasses overriding `+matchedIDs`.
 + (NSDictionary<NSString*,NSNumber*> *) matchForVendorID: (uint16_t)vendorID
                                                productID: (uint16_t)productID;
 
 #pragma mark -
 #pragma mark Event handling
 
-/// Returns \c YES if the specified event should be dispatched to an available binding,
-/// or \c NO if the event should be ignored. The default implementation always returns YES.
+/// Returns `YES` if the specified event should be dispatched to an available binding,
+/// or `NO` if the event should be ignored. The default implementation always returns `YES`.
 - (BOOL) shouldDispatchHIDEvent: (ADBHIDEvent *)event;
 
 @end

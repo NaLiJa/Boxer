@@ -10,18 +10,18 @@
 #import "BXEmulatedJoystick.h"
 #import "ADBHIDEvent.h"
 
-/// \c BXJoysticks extends \c BXInputController with delegate methods for handling HID joystick input
+/// `BXJoystickInput` extends `BXInputController` with delegate methods for handling HID joystick input
 /// from BXJoystickController. These are translated into emulated joystick responses and passed
 /// to BXInputHandler.
 @interface BXInputController (BXJoystickInput) <ADBHIDDeviceDelegate>
 
-/// Whether to use the standard (BXGameportPollBasedTiming) or strict (BXGameportClockBasedTiming) gameport timing mode.
+/// Whether to use the standard (`BXGameportPollBasedTiming`) or strict (`BXGameportClockBasedTiming`) gameport timing mode.
 @property (assign, nonatomic) BOOL strictGameportTiming;
 
-/// Which joystick type to use if supported, specified as a class conforming to the \c BXEmulatedJoystick protocol.
+/// Which joystick type to use if supported, specified as a class conforming to the `BXEmulatedJoystick` protocol.
 @property (copy, nonatomic) Class preferredJoystickType;
 
-/// The joystick types available to choose from, represented as an array of BXEmulatedJoystick-conforming classes.
+/// The joystick types available to choose from, represented as an array of `BXEmulatedJoystick`-conforming classes.
 /// Used by the joystick type picker in the Inspector UI.
 @property (readonly, retain, nonatomic) NSArray *availableJoystickTypes;
 

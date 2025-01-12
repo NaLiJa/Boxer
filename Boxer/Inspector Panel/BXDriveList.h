@@ -14,7 +14,7 @@
 @class BXDriveItem;
 @class BXDriveItemView;
 
-/// \c BXDriveList represents the currently-mounted DOS drives in the Boxer inspector panel. It is
+/// `BXDriveList` represents the currently-mounted DOS drives in the Boxer inspector panel. It is
 /// a custom subclass of the standard Cocoa collection view to implement drag operations for drives.
 @interface BXDriveList : NSCollectionView
 

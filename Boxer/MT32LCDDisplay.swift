@@ -8,7 +8,7 @@
 
 import Cocoa
 
-/// BXMT32LCDDisplay imitates, as the name suggests, the LCD display on a Roland MT-32 Sound Module.
+/// `MT32LCDDisplay` imitates, as the name suggests, the LCD display on a Roland MT-32 Sound Module.
 /// It is used for displaying messages sent by the games to the emulated MT-32. (Many Sierra games
 /// would send cheeky messages to it on startup.)
 ///

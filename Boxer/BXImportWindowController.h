@@ -10,9 +10,10 @@
 
 @class BXImportSession;
 
-/// \c BXImportWindowController manages the behaviour of the drive import window and coordinates
+/// `BXImportWindowController` manages the behaviour of the drive import window and coordinates
 /// animation and transitions between the window's various views.
-/// It takes its marching orders from the BXImportSession document class.
+///
+/// It takes its marching orders from the `BXImportSession` document class.
 @interface BXImportWindowController : ADBMultiPanelWindowController
 
 #pragma mark -
@@ -35,7 +36,7 @@
 @property (strong, nonatomic) IBOutlet NSView *finishedPanel;
 
 
-/// Recast NSWindowController's standard accessors so that we get our own classes
+/// Recast `NSWindowController`'s standard accessors so that we get our own classes
 /// (and don't have to keep recasting them ourselves.)
 - (BXImportSession *) document;
 

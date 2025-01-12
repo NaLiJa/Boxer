@@ -10,7 +10,7 @@
 
 @class BXSession;
 
-/// \c BXGameboxPanelController manages the gamebox panel of the Inspector window. Its primary concern
+/// `BXGameboxPanelController` manages the gamebox panel of the Inspector window. Its primary concern
 /// is the choose-a-default-program popup button: it is responsible for populating the popup button
 /// menu with the available programs in the current gamebox (if any), and synchronising its selection
 /// with the default program of the gamebox.
@@ -29,7 +29,7 @@
 /// Currently unused - intended for a button to sit alongside the program popup selector.
 - (IBAction) launchDefaultProgram: (id)sender;
 
-/// Shows a standard OS X open panel for choosing an executable file from Finder.
+/// Shows a standard macOS open panel for choosing an executable file from Finder.
 - (IBAction) showProgramChooserPanel: (id)sender;
 
 /// Called after choosing a new program from the file picker. Adds a new item for that URL

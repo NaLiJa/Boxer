@@ -45,10 +45,10 @@ typedef NS_ENUM(NSInteger, BXDOSWindowPanel) {
 @protocol BXFrameRenderingView;
 
 /// Produced by our rendering view when it begins/ends a live resize operation.
-extern NSString * const BXViewWillLiveResizeNotification;
-extern NSString * const BXViewDidLiveResizeNotification;
+extern NSNotificationName const BXViewWillLiveResizeNotification;
+extern NSNotificationName const BXViewDidLiveResizeNotification;
 
-/// \c BXDOSWindowController manages a session window and its dependent views and view controllers.
+/// `BXDOSWindowController` manages a session window and its dependent views and view controllers.
 /// Besides the usual window-controller responsibilities, it handles switching to and from fullscreen
 /// and passing frames to the emulator to the rendering view.
 @interface BXDOSWindowController : NSWindowController <ADBFullScreenCapableWindowDelegate>
@@ -170,8 +170,9 @@ extern NSString * const BXViewDidLiveResizeNotification;
 /// Toggle the emulator's active rendering filter.
 - (IBAction) toggleRenderingStyle: (id)sender;
 
-/// Increase/decrease the draw size of the fullscreen window.
+/// Increase the draw size of the fullscreen window.
 - (IBAction) incrementFullscreenSize: (id)sender;
+/// Decrease the draw size of the fullscreen window.
 - (IBAction) decrementFullscreenSize: (id)sender;
 
 #pragma mark -

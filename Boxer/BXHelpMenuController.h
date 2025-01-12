@@ -10,7 +10,7 @@
 
 @class BXSession;
 
-/// \c BXHelpMenuController manages the Boxer Help menu and its actions. When a DOS session is active,
+/// `BXHelpMenuController` manages the Boxer Help menu and its actions. When a DOS session is active,
 /// it populates the help menu with documentation files found within the session's gamebox (if any)
 /// and links to look up the game on Mobygames or Replacementdocs.
 /// This controller is instantiated in MainMenu.xib.

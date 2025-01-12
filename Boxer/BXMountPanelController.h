@@ -11,8 +11,8 @@
 
 @class BXSession;
 
-/// \c BXMountPanelController displays the mount-a-new-drive open panel and manages its accessory view.
-/// It is responsible for synchronising the drive-settings fields with the current file selection, 
+/// `BXMountPanelController` displays the mount-a-new-drive open panel and manages its accessory view.
+/// It is responsible for synchronising the drive-settings fields with the current file selection,
 /// and for calling the relevant mount commands once a file is chosen.
 @interface BXMountPanelController : NSViewController <NSOpenSavePanelDelegate>
 
@@ -40,7 +40,7 @@
 - (void) syncMountOptionsForPanel: (NSOpenPanel *)openPanel;
 
 /// Mounts the specified selected file or folder, chosen from the open panel.
-/// Returns \c YES if successfully, or NO and populates outError if the drive could not be mounted.
+/// Returns `YES` if successfully, or `NO` and populates `outError` if the drive could not be mounted.
 - (BOOL) mountChosenURL: (NSURL *)URL error: (NSError **)outError;
 
 @end

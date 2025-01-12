@@ -19,7 +19,7 @@
 
 #pragma mark Private method declarations
 
-// BXDOSWindowControllerPrivate defines the private interface and constants
+/// BXDOSWindowControllerPrivate defines the private interface and constants
 /// for BXDOSWindowController and its subclasses.
 @interface BXDOSWindowController ()
 
@@ -27,7 +27,7 @@
 /// (which clears the window's frame name temporarily so that the fullscreen frame isn't saved.)
 @property (copy, nonatomic) NSString *autosaveNameBeforeFullScreen;
 
-/// Returns \c YES if the window is in the process of resizing itself.
+/// Returns `YES` if the window is in the process of resizing itself.
 @property (readonly, nonatomic) BOOL isResizing;
 
 /// Returns the size that the rendering view would currently be *if it were in windowed mode.*
@@ -35,7 +35,7 @@
 @property (readonly, nonatomic) NSSize windowedRenderingViewSize;
 
 /// The maximum size at which the rendering view should render.
-/// This will return \c NSZeroSize while in windowed mode or when no \c maxFullscreenViewportSize has been set.
+/// This will return `NSZeroSize` while in windowed mode or when no `-maxFullscreenViewportSize` has been set.
 @property (readonly, nonatomic) NSSize maxViewportSizeUIBinding;
 
 /// Whether the fullscreen size is at its minimum/maximum extents.
@@ -44,7 +44,7 @@
 @property (readonly, nonatomic) BOOL fullscreenSizeAtMaximum;
 
 /// Whether the viewport will fill the screen in fullscreen mode.
-/// Will be YES if \c maxFullscreenViewportSize is NSZeroSize.
+/// Will be `YES` if `-maxFullscreenViewportSize` is `NSZeroSize`.
 @property (readonly, nonatomic) BOOL fullscreenViewportFillsCanvas;
 
 /// The minimum size to which the fullscreen viewport can be set.
@@ -78,7 +78,7 @@
                                  animate: (BOOL)performAnimation;
 
 /// Resize the window if needed to accomodate the specified frame.
-/// Returns YES if the window was resized, NO if the size remained the same.
+/// Returns `YES` if the window was resized, `NO` if the size remained the same.
 - (BOOL) _resizeToAccommodateFrame: (BXVideoFrame *)frame;
 
 /// Returns the view size that should be used for rendering the specified frame.
@@ -92,7 +92,7 @@
 - (void) _slideView: (NSView *)view shown: (BOOL)show animate: (BOOL)animate;
 
 /// Whether aspect-ratio correction should be applied to the specified frame.
-/// Will return \c NO for text-only frames, \c YES otherwise.
+/// Will return `NO` for text-only frames, `YES` otherwise.
 - (BOOL) _shouldCorrectAspectRatioOfFrame: (BXVideoFrame *)frame;
 
 /// Returns the next suitable fullscreen viewport size that's above/below the specified size.

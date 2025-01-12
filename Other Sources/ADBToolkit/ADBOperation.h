@@ -101,7 +101,7 @@ extern NSString * const ADBOperationIndeterminateKey;
 @property (weak, nullable) id <ADBOperationDelegate> delegate;
 
 /// The callback methods that will be called on the delegate for progress notifications.
-/// These default to @c ADBOperationDelegate <code>operationInProgress:</code>, @c operationDidFinish: etc.
+/// These default to `ADBOperationDelegate` `operationInProgress:`, `operationDidFinish:` etc.
 /// and must have the same signatures as those methods.
 @property (assign) SEL willStartSelector;
 @property (assign) SEL inProgressSelector;
@@ -109,11 +109,11 @@ extern NSString * const ADBOperationIndeterminateKey;
 @property (assign) SEL didFinishSelector;
 
 /// Arbitrary context info for this operation. Included in notification dictionaries
-/// for controlling contexts to use. Note that this is an NSObject and will be retained.
+/// for controlling contexts to use. Note that this is an `NSObject` and will be retained.
 @property (strong, nullable) id contextInfo;
 
-/// Whether delegate and \c NSNotificationCenter notifications should be sent on the main
-/// thread or on the operation's current thread. Defaults to \c YES (the main thread).
+/// Whether delegate and `NSNotificationCenter` notifications should be sent on the main
+/// thread or on the operation's current thread. Defaults to `YES` (the main thread).
 @property (assign) BOOL notifiesOnMainThread;
 
 #pragma mark -
@@ -135,13 +135,14 @@ extern NSString * const ADBOperationIndeterminateKey;
 
 /// Whether the operation has succeeeded or failed: only applicable once the operation
 /// finishes, though it can be called at any time.
-/// In the base implementation, this will return \c NO if the operation has generated
-/// an error, or \c YES otherwise (even if the operation has not yet finished.)
+///
+/// In the base implementation, this will return `NO` if the operation has generated
+/// an error, or `YES` otherwise (even if the operation has not yet finished.)
 /// This can be overridden by subclasses.
 @property (readonly) BOOL succeeded;
 
 /// Any showstopping error that occurred when performing the operation.
-/// If this is set, succeeded will be NO.
+/// If this is set, succeeded will be `NO`.
 @property (strong, nullable) NSError *error;
 
 @end

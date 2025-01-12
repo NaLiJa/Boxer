@@ -10,14 +10,14 @@
 #import <DDHidLib/DDHidJoystick.h>
 #import "ADBHIDMonitor.h"
 
-/// \c BXJoystickController receives joystick input from connected controllers via the DDHidLib toolkit.
+/// `BXJoystickController` receives joystick input from connected controllers via the DDHidLib toolkit.
 /// These messages are then translated into a more Boxer-friendly format and sent onwards to the
 /// active DOS session's input controller.
 @interface BXJoystickController: NSObject <ADBHIDMonitorDelegate, DDHidJoystickDelegate>
 
 @property (readonly, strong, nonatomic) ADBHIDMonitor *HIDMonitor;
 
-/// An array of\c  DDHIDJoystick instances for each joystick currently connected.
+/// An array of `DDHIDJoystick` instances for each joystick currently connected.
 /// Corresponds to hidMonitor matchedDevices.
 @property (copy, readonly, nonatomic) NSArray<DDHidJoystick*> *joystickDevices;
 

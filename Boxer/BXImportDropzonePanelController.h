@@ -12,7 +12,7 @@
 @class BXImportWindowController;
 @class BXBlueprintProgressIndicator;
 
-/// \c BXImportDropzonePanelController controls the behaviour of the dropzone panel
+/// `BXImportDropzonePanelController` controls the behaviour of the dropzone panel
 /// in the game import process.
 @interface BXImportDropzonePanelController : NSViewController <NSOpenSavePanelDelegate>
 

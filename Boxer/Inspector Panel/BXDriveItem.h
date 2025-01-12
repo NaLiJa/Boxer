@@ -8,8 +8,8 @@
 #import "BXCollectionItemView.h"
 
 @class BXDrive;
-/// BXDriveItem represents each drive in the list and acts
-/// as a view controller for its corresponding BXDriveItemView.
+/// `BXDriveItem` represents each drive in the list and acts
+/// as a view controller for its corresponding `BXDriveItemView`.
 @interface BXDriveItem : BXCollectionItem
 
 #pragma mark - Outlet properties
@@ -26,7 +26,7 @@
 
 #pragma mark - Description properties
 
-/// The drive to which this item corresponds. Derived automatically from representedObject.
+/// The drive to which this item corresponds. Derived automatically from `-representedObject`.
 @property (strong, readonly, nonatomic) BXDrive *drive;
 
 /// The icon to display for the drive we represent.
@@ -62,7 +62,7 @@
 
 #pragma mark - Notifications
 
-/// Import notifications dispatched by BXDrivePanelController,
+/// Import notifications dispatched by `BXDrivePanelController`,
 /// to the drive item for the drive being imported.
 - (void) driveImportWillStart: (NSNotification *)notification;
 - (void) driveImportInProgress: (NSNotification *)notification;

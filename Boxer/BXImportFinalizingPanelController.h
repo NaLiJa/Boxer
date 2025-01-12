@@ -11,14 +11,14 @@
 
 @class BXImportWindowController;
 
-/// \c BXImportFinalizingPanelController manages the finalizing-gamebox view of the game import window.
+/// `BXImportFinalizingPanelController` manages the finalizing-gamebox view of the game import window.
 @interface BXImportFinalizingPanelController : NSViewController
 
 #pragma mark -
 #pragma mark Properties
 
 /// A back-reference to our owning window controller.
-@property (unsafe_unretained, nonatomic) IBOutlet BXImportWindowController *controller;
+@property (weak, nonatomic) IBOutlet BXImportWindowController *controller;
 
 /// A textual description of what import stage we are currently performing.
 /// Used for populating the description field beneath the progress bar.
@@ -29,14 +29,14 @@
 @property (readonly, nonatomic) BOOL cancelButtonEnabled;
 
 /// Whether to show the tip about importing additional CDs.
-/// Will be \c YES if the source is a CD-ROM or CD image, NO otherwise.
+/// Will be `YES` if the source is a CD-ROM or CD image, NO otherwise.
 @property (readonly, nonatomic) BOOL showAdditionalCDTips;
 
 
 #pragma mark -
 #pragma mark Helper class methods
 
-/// Helper methods used by progressDescription and cancelButtonLabel.
+/// Helper methods used by `progressDescription` and `cancelButtonLabel`.
 + (NSString *) cancelButtonLabelForImportType: (BXSourceFileImportType)importType;
 + (NSString *) stageDescriptionForImportType: (BXSourceFileImportType)importType;
 

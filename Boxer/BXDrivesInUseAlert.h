@@ -11,7 +11,7 @@
 @class BXSession;
 @class BXDrive;
 
-/// \c BXDrivesInUseAlert is shown when a user tries to unmount one or more drives that are currently
+/// `BXDrivesInUseAlert` is shown when a user tries to unmount one or more drives that are currently
 /// being accessed by the DOS process. It displays a warning and confirmation.
 @interface BXDrivesInUseAlert : NSAlert
 

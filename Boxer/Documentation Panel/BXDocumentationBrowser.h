@@ -19,7 +19,7 @@
 
 #pragma mark - Properties
 
-/// The delegate to which we will send \c BXDocumentationBrowserDelegate messages.
+/// The delegate to which we will send `BXDocumentationBrowserDelegate` messages.
 @property (weak, nonatomic) IBOutlet id <BXDocumentationBrowserDelegate> delegate;
 
 /// The scrolling wrapper in which our documenation list is displayed.
@@ -34,7 +34,7 @@
 /// The collection view in which our documentation will be displayed.
 @property (strong, nonatomic) IBOutlet BXDocumentationList *documentationList;
 
-/// An array of NSURLs for the documentation files included in this gamebox.
+/// An array of `NSURL`s for the documentation files included in this gamebox.
 /// This is mapped directly to the documentation URLs reported by the gamebox.
 @property (readonly, copy, nonatomic) NSArray<NSURL*> *documentationURLs;
 
@@ -67,6 +67,8 @@
 /// Returns a newly-created BXDocumentationListController instance
 /// whose UI is loaded from DocumentationList.xib.
 + (instancetype) browserForSession: (BXSession *)session;
+/// Returns a newly-created BXDocumentationListController instance
+/// whose UI is loaded from DocumentationList.xib.
 - (instancetype) initWithSession: (BXSession *)session;
 
 
@@ -76,9 +78,11 @@
 - (IBAction) revealSelectedDocumentationItemsInFinder: (id)sender;
 - (IBAction) trashSelectedDocumentationItems: (id)sender;
 
-/// Helper methods for adding/removing documentation items.
-/// These will register undo actions and will present error sheets if importing/removal fails.
+/// Helper method for removing documentation items.
+/// These will register undo actions and will present error sheets if removal fails.
 - (BOOL) removeDocumentationURLs: (NSArray<NSURL*> *)URLs;
+/// Helper method for adding documentation items.
+/// These will register undo actions and will present error sheets if importing fails.
 - (BOOL) importDocumentationURLs: (NSArray<NSURL*> *)URLs;
 
 
@@ -96,7 +100,7 @@
 
 @end
 
-/// The \c BXDocumentationPreviews category expands BXDocumentationListController to allow documentation to be shown in a QuickLook preview panel.
+/// The `BXDocumentationPreviews` category expands BXDocumentationListController to allow documentation to be shown in a QuickLook preview panel.
 @interface BXDocumentationBrowser (BXDocumentationPreviews) <QLPreviewPanelDelegate, QLPreviewPanelDataSource>
 
 /// Displays a QuickLook preview panel for the specified documentation items.
@@ -122,12 +126,12 @@
 - (void) documentationBrowser: (BXDocumentationBrowser *)browser didRevealURLs: (NSArray<NSURL*> *)URLs;
 
 /// Called when the browser has encountered an error that it cannot deal with and will present it.
-/// This is analoguous to willPresentError:, and likewise you can return a different error to customize
+/// This is analoguous to `-willPresentError:`, and likewise you can return a different error to customize
 /// the error that will be displayed.
 - (NSError *) documentationBrowser: (BXDocumentationBrowser *)browser willPresentError: (NSError *)error;
 
 /// Called when the browser wants to present an error, to return the window in which it should present the error modally.
-/// If this returns nil, or is unimplemented, the error will be presented as application-modal instead.
+/// If this returns `nil`, or is unimplemented, the error will be presented as application-modal instead.
 - (NSWindow *) documentationBrowser: (BXDocumentationBrowser *)browser windowForModalError: (NSError *)error;
 
 /// Called just before the browser updates with new URLs. At this point the browser's documentationURLs property,
@@ -177,7 +181,7 @@
 
 /// Returns the specified width rounded up to match cleanly to one of our own possible widths.
 ///
-/// Used by <code>BXDocumentationBrowser idealContentSizeForNumberOfItems:</code> to ensure that it shinkwraps
+/// Used by `-[BXDocumentationBrowser idealContentSizeForNumberOfItems:]` to ensure that it shinkwraps
 /// the browser to a size that can cleanly accommodate each column of documentation.
 - (CGFloat) snappedWidthForTargetWidth: (CGFloat)targetWidth;
 

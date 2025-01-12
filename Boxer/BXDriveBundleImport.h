@@ -17,7 +17,7 @@ NS_ERROR_ENUM(BXDriveBundleErrorDomain) {
 };
 
 
-/// BXDriveBundleImport wraps BIN/CUE images and any associated audio tracks into a .cdmedia bundle,
+/// `BXDriveBundleImport` wraps BIN/CUE images and any associated audio tracks into a .cdmedia bundle,
 /// rewriting cue paths as necessary.
 @interface BXDriveBundleImport : ADBFileTransferSet <BXDriveImport>
 @end

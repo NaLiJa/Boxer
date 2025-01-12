@@ -10,10 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// \c BXImportDropzone is used in the game import window to draw a dashed dropzone region,
+/// `BXImportDropzone` is used in the game import window to draw a dashed dropzone region,
 /// which animates while an importable file is dragged over the panel, and which displays
 /// the file's icon after dropping. Clicking the region will reveal a file picker.
-/// (\c BXImportDropzone does not actually handle drag-drop events itself: the panel itself does that.)
+/// (`BXImportDropzone` does not actually handle drag-drop events itself: the panel itself does that.)
 @interface BXImportDropzone : NSButton
 
 //Whether we're the target of a drag-drop operation. When YES, the dropzone's border will animate.

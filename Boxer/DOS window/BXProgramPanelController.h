@@ -10,7 +10,7 @@
 
 @class BXSession;
 
-/// \c BXProgramPanelController manages the program picker panel inside the session window. It is
+/// `BXProgramPanelController` manages the program picker panel inside the session window. It is
 /// responsible for populating the program selection and toggling which picker interface is shown
 /// (picker, default program toggle, no programs notice) based on the state of the session.
 ///
@@ -71,7 +71,7 @@ __deprecated
 - (void) syncPanelExecutables;
 
 /// Whether we can set the currently-active program to be the default gamebox target.
-/// Will be \c NO if there's no active program, there's no gamebox, or the active program is outside the gamebox.
+/// Will be `NO` if there's no active program, there's no gamebox, or the active program is outside the gamebox.
 - (BOOL) canSetActiveProgramToDefault;
 
 

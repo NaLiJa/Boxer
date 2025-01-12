@@ -11,7 +11,7 @@
 
 @class BXWelcomeButton;
 
-/// \c BXWelcomeWindowController manages the welcome window shown when Boxer launches.
+/// `BXWelcomeWindowController` manages the welcome window shown when Boxer launches.
 @interface BXWelcomeWindowController : NSWindowController <BXWelcomeButtonDraggingDelegate>
 
 /// The Open Recent popup button.

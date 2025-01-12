@@ -14,10 +14,11 @@
 @class BXSession;
 @class DDHidJoystick;
 
-/// BXInputController processes keyboard and mouse events received by its view and turns them
+/// `BXInputController` processes keyboard and mouse events received by its view and turns them
 /// into input commands to the emulator's own input handler (which for convenience is set as the
 /// controller's representedObject).
-/// It also manages mouse locking and the appearance and behaviour of the OS X mouse cursor.
+///
+/// It also manages mouse locking and the appearance and behaviour of the macOS mouse cursor.
 @interface BXInputController : NSViewController <NSAnimationDelegate>
 {
 	BXCursorFadeAnimation *_cursorFade;
@@ -40,7 +41,7 @@
     
 	BXMouseButtonMask _simulatedMouseButtons;
     
-    /// Which OSX virtual keycodes were pressed with a modifier, causing
+    /// Which macOS virtual keycodes were pressed with a modifier, causing
     /// them to send a different key than usual. Used for releasing
     /// simulated keys upon key-up.
     BOOL _modifiedKeys[BXMaxSystemKeyCode];
@@ -91,15 +92,15 @@
 /// Called when the cursor needs updating outside of the standard NSResponder event mechanisms.
 - (void) syncCursor;
 
-/// Called by \c BXDOSWindowController whenever the view loses keyboard focus.
+/// Called by `BXDOSWindowController` whenever the view loses keyboard focus.
 - (void) didResignKey;
 
-/// Called by \c BXDOSWindowController whenever the view regains keyboard focus.
+/// Called by `BXDOSWindowController` whenever the view regains keyboard focus.
 - (void) didBecomeKey;
 
 /// Applies the specified mouse-lock state.
-/// If force is NO, the mouse will not be locked if canLockMouse returns NO.
-/// If force is YES, it will be locked regardless.
+/// If `force` is `NO`, the mouse will not be locked if `-canLockMouse` returns `NO`.
+/// If `force` is `YES`, it will be locked regardless.
 - (void) setMouseLocked: (BOOL)locked
                   force: (BOOL)force;
 

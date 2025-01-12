@@ -19,7 +19,7 @@ NS_ENUM(NSInteger) {
 
 @class BXDriveList;
 
-/// \c BXInspectorController manages the Boxer inspector panel. It is responsible for displaying and
+/// `BXInspectorController` manages the Boxer inspector panel. It is responsible for displaying and
 /// toggling the tabs of the panel.
 @interface BXInspectorController : ADBTabbedWindowController
 {
@@ -49,7 +49,7 @@ NS_ENUM(NSInteger) {
 - (IBAction) showInactiveJoystickPanelHelp: (id)sender;
 
 /// Temporarily hides the panel if it is currently visible:
-/// It can then be unhidden with revealIfHidden.
+/// It can then be unhidden with `-revealIfHidden`.
 /// This is used to temporarily suppress the inspector panel while the mouse is locked.
 - (void) hideIfVisible;
 - (void) revealIfHidden;

@@ -8,8 +8,8 @@
 
 #import "BXCDImageImport.h"
 
-/// \c BXBinCueImageImport rips CD-ROM discs to BIN/CUE images that are bundled into a .cdmedia bundle,
-/// using the cdrdao utility.
+/// `BXBinCueImageImport` rips CD-ROM discs to BIN/CUE images that are bundled into a .cdmedia bundle,
+/// using the *cdrdao* utility.
 @interface BXBinCueImageImport : BXCDImageImport
 
 /// Enables/disables cdrdao's error-correction when reading audio tracks.

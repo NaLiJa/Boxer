@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class BXImportWindowController;
 
-/// \c BXImportInstallerPanelController controls the behaviour of the choose-thine-installer panel
+/// `BXImportInstallerPanelController` controls the behaviour of the choose-thine-installer panel
 /// in the game import process.
 @interface BXImportInstallerPanelController : NSViewController < NSOpenSavePanelDelegate >
 
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet NSPopUpButton *installerSelector;
 
 /// Whether we can show a menu option to let the user pick an installer from an open panel.
-/// Will be \c NO if the source URL of the import is a disk image, rather than a folder.
+/// Will be `NO` if the source URL of the import is a disk image, rather than a folder.
 @property (readonly, nonatomic) BOOL canBrowseInstallers;
 
 #pragma mark -

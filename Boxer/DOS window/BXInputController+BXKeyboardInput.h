@@ -8,7 +8,7 @@
 
 #import "BXInputController.h"
 
-/// The \c BXKeyboardInput category handles BXInputController's keyboard event responses
+/// The `BXKeyboardInput` category handles `BXInputController`'s keyboard event responses
 /// and simulated keyboard actions.
 @interface BXInputController (BXKeyboardInput)
 

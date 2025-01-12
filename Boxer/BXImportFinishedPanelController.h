@@ -11,12 +11,12 @@
 @class BXImportIconDropzone;
 @class BXImportWindowController;
 
-/// \c BXImportFinishedPanelController controls the appearance and behaviour of the final
+/// `BXImportFinishedPanelController` controls the appearance and behaviour of the final
 /// your-gamebox-is-finished panel of the import process.
 @interface BXImportFinishedPanelController : NSViewController
 
 /// A back-reference to our owning window controller.
-@property (unsafe_unretained, nonatomic) IBOutlet BXImportWindowController *controller;
+@property (weak, nonatomic) IBOutlet BXImportWindowController *controller;
 
 /// The image well that displays the gamebox icon.
 @property (strong, nonatomic) IBOutlet BXImportIconDropzone *iconView;

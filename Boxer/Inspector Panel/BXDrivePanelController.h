@@ -13,7 +13,7 @@
 @class BXDriveList;
 @class BXDrive;
 
-/// \c BXDrivePanelController manages the Drives panel of the Inspector window.
+/// `BXDrivePanelController` manages the Drives panel of the Inspector window.
 @interface BXDrivePanelController : NSViewController <ADBOperationDelegate, NSWindowDelegate, NSDraggingDestination, NSDraggingSource>
 
 #pragma mark -
@@ -49,7 +49,7 @@
 - (IBAction) openSelectedDrivesInDOS: (id)sender; 
 
 /// Mount/unmount the selected drives in DOS. Will call mountSelectedDrives: if all selected
-/// drives are unmounted, or unmountSelectedDrives: if one or more selected drives is mounted.
+/// drives are unmounted, or `-unmountSelectedDrives:` if one or more selected drives is mounted.
 - (IBAction) toggleSelectedDrives: (id)sender;
 
 /// Mount the selected drives in DOS.

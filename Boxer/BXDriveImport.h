@@ -18,8 +18,8 @@ extern NSString * const BXUniqueDriveNameFormat;
 
 @class BXDrive;
 
-/// The \c BXDriveImport protocol defines the public interface for drive import operations,
-/// which are expected to descend from NSOperation. BXDriveImport is also a class that defines a number
+/// The `BXDriveImport` protocol defines the public interface for drive import operations,
+/// which are expected to descend from `NSOperation`. `BXDriveImport` is also a class that defines a number
 /// of helper methods and factory methods for use by concrete import operations.
 @protocol BXDriveImport <NSObject, ADBFileTransfer>
 
@@ -50,7 +50,7 @@ extern NSString * const BXUniqueDriveNameFormat;
 @property (class, readonly) BOOL driveUnavailableDuringImport;
 
 
-/// Return a suitably initialized BXOperation subclass for transferring the drive.
+/// Return a suitably initialized `BXOperation` subclass for transferring the drive.
 - (instancetype) initForDrive: (BXDrive *)drive
          destinationFolderURL: (NSURL *)destinationFolderURL
                     copyFiles: (BOOL)copyFiles;
@@ -71,9 +71,11 @@ extern NSString * const BXUniqueDriveNameFormat;
 + (nullable Class) importClassForDrive: (BXDrive *)drive;
 
 /// Returns a safe replacement import operation for the specified failed import,
-/// or nil if no fallback was available.
+/// or `nil` if no fallback was available.
+///
 /// The replacement will have the same source drive and destination folder as
 /// the original import.
+///
 /// Used when e.g. a disc-ripping import fails because of a driver-related issue:
 /// this will fall back on a safer method of importing.
 + (nullable id <BXDriveImport>) fallbackForFailedImport: (id <BXDriveImport>)failedImport;

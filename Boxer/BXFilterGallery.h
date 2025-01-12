@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-/// \c BXFilterGallery draws Boxer's rendering filter gallery in the preferences pane. It consists of
-/// the \c BXFilterGallery view that renders a graphical background, containing BXFilterPortrait
+/// `BXFilterGallery` draws Boxer's rendering filter gallery in the preferences pane. It consists of
+/// the `BXFilterGallery` view that renders a graphical background, containing BXFilterPortrait
 /// buttons for each option.
 @interface BXFilterGallery : NSView
 @end

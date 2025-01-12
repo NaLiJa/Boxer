@@ -8,10 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-/// \c BXCoverArtWell is a custom image well for dropping game artwork into the Inspector panel.
+/// `BXCoverArtWell` is a custom image well for dropping game artwork into the Inspector panel.
 /// It displays the cover art image of the current gamebox, or a dashed grey drop region indicator
 /// if the gamebox has no cover art. It converts dropped/pasted images into the Boxer cover-art style
-/// using BXCoverArt.
+/// using `BXCoverArt`.
 ///
 /// IB note: this view enlarges itself slightly from the size set in Interface Builder, in order to
 /// accomodate its custom focus ring without clipping. (We use a custom focus ring because we're a

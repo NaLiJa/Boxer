@@ -10,12 +10,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// BXBootlegCoverArt is similar to BXCoverArt, but creates generic cover art based on a title string
+/// `BXBootlegCoverArt` is similar to `BXCoverArt`, but creates generic cover art based on a title string
 /// rather than a box image. Implementing classes create artwork to resemble bootleg floppy disks and
 /// CD-ROM jewel-cases.
 @protocol BXBootlegCoverArt <NSObject>
 
-/// Return a new BXBootlegCoverArt implementor using the specified title.
+/// Return a new `BXBootlegCoverArt` implementor using the specified title.
 - (instancetype) initWithTitle: (NSString *)coverTitle;
 
 /// The game title to display on this cover art.

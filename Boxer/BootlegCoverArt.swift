@@ -9,6 +9,7 @@
 import Cocoa
 
 extension BXBootlegCoverArt {
+	/// Returns a cover art image representation from the instance's title rendered at the specified size, but only on a scale of *1*.
 	func representation(for iconSize: NSSize) -> NSImageRep {
 		return representation(for: iconSize, scale: 1)
 	}
@@ -32,19 +33,14 @@ class JewelCase : NSObject, BXBootlegCoverArt {
 		let topLayer = type(of: self).topLayer(for: iconSize)
 		let textRegion = type(of: self).textRegion(for: frame)
 		
-		if let baseLayer {
-			baseLayer.draw(in: frame, from: .zero, operation: .sourceOver, fraction: 1)
-		}
+		baseLayer?.draw(in: frame, from: .zero, operation: .sourceOver, fraction: 1)
 		
 		if !textRegion.isEmpty {
 			let textAttributes = type(of: self).textAttributes(for: iconSize)
-			(title as NSString).draw(in: textRegion, withAttributes: textAttributes)
-			//TODO: use title.draw(with: textRegion, attributes: textAttributes)
+			title.draw(with: textRegion, attributes: textAttributes, context: nil)
 		}
 		
-		if let topLayer {
-			topLayer.draw(in: frame, from: .zero, operation: .sourceOver, fraction: 1)
-		}
+		topLayer?.draw(in: frame, from: .zero, operation: .sourceOver, fraction: 1)
 	}
 	
 	final func representation(for iconSize: NSSize, scale: CGFloat) -> NSImageRep {
@@ -65,15 +61,15 @@ class JewelCase : NSObject, BXBootlegCoverArt {
 	final func coverArt() -> NSImage {
 		let coverArt = NSImage()
 		coverArt.addRepresentation(representation(for: NSSize(width: 512, height: 512), scale: 2))
-		coverArt.addRepresentation(representation(for: NSSize(width: 512, height: 512), scale: 1))
+		coverArt.addRepresentation(representation(for: NSSize(width: 512, height: 512)))
 		coverArt.addRepresentation(representation(for: NSSize(width: 256, height: 256), scale: 2))
-		coverArt.addRepresentation(representation(for: NSSize(width: 256, height: 256), scale: 1))
+		coverArt.addRepresentation(representation(for: NSSize(width: 256, height: 256)))
 		coverArt.addRepresentation(representation(for: NSSize(width: 128, height: 128), scale: 2))
-		coverArt.addRepresentation(representation(for: NSSize(width: 128, height: 128), scale: 1))
+		coverArt.addRepresentation(representation(for: NSSize(width: 128, height: 128)))
 		coverArt.addRepresentation(representation(for: NSSize(width: 32, height: 32), scale: 2))
-		coverArt.addRepresentation(representation(for: NSSize(width: 32, height: 32), scale: 1))
+		coverArt.addRepresentation(representation(for: NSSize(width: 32, height: 32)))
 		coverArt.addRepresentation(representation(for: NSSize(width: 16, height: 16), scale: 2))
-		coverArt.addRepresentation(representation(for: NSSize(width: 16, height: 16), scale: 1))
+		coverArt.addRepresentation(representation(for: NSSize(width: 16, height: 16)))
 		return coverArt
 	}
 	

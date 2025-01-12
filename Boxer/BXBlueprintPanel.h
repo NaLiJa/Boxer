@@ -11,7 +11,7 @@
 #import <Cocoa/Cocoa.h>
 #import "BXHUDSpinningProgressIndicator.h"
 
-/// \c BXBlueprintPanel and friends render a custom blueprint appearance for views in the import process.
+/// `BXBlueprintPanel` and friends render a custom blueprint appearance for views in the import process.
 @interface BXBlueprintPanel : NSView
 @end
 

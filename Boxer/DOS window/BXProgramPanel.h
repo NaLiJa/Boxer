@@ -17,7 +17,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 //Interface Builder tags
-enum {
+NS_ENUM(NSInteger) {
 	BXProgramPanelTitle			= 1,
 	BXProgramPanelDefaultToggle	= 2,
 	BXProgramPanelHide			= 3,

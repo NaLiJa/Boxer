@@ -11,6 +11,6 @@
 
 @class BXDrive;
 
-/// \c BXSimpleDriveImport handles the importing of a drive to a specified destination.
+/// `BXSimpleDriveImport` handles the importing of a drive to a specified destination.
 @interface BXSimpleDriveImport : ADBSingleFileTransfer <BXDriveImport>
 @end

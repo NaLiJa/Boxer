@@ -11,7 +11,7 @@
 @class BXFilterGallery;
 @class BXMT32ROMDropzone;
 
-/// BXPreferencesController manages Boxer's application-wide preferences panel.
+/// `BXPreferencesController` manages Boxer's application-wide preferences panel.
 /// It is a singleton, and once opened for the first time it stays alive throughout the lifetime of the application.
 @interface BXPreferencesController : ADBTabbedWindowController <NSOpenSavePanelDelegate>
 
@@ -55,14 +55,14 @@
 
 
 /// Provides a singleton instance of the window controller which stays retained for the lifetime
-/// of the application. BXPreferencesController should always be accessed from this singleton.
+/// of the application. `BXPreferencesController` should always be accessed from this singleton.
 + (BXPreferencesController *) controller;
 
 
 #pragma mark - Filter gallery controls
 
 /// Change the default render filter to match the sender's tag.
-/// @note that there is also a @c -toggleRenderingStyle: defined on @c BXDOSWindowController
+/// - note: that there is also a `-toggleRenderingStyle:` defined on `BXDOSWindowController`
 /// and used by main menu items, which does the same thing. This uses an intentionally different
 /// name so as not to collide, as the two sets of controls need to be validated differently.
 - (IBAction) toggleDefaultRenderingStyle: (id)sender;
@@ -84,7 +84,7 @@
 /// Reveal Boxer's MT-32 ROMs folder (located inside Application Support) in a Finder window
 /// and selects the currently-installed ROMs within that folder.
 /// This creates the folder if it doesn't already exist.
-/// @see BXBaseAppController+BXSupportFiles @c-MT32ROMURLCreatingIfMissing:error:
+/// @see BXBaseAppController+BXSupportFiles @c -MT32ROMURLCreatingIfMissing:error:
 - (IBAction) showMT32ROMsInFinder: (id)sender;
 
 /// Show a standard OS X open panel for choosing MT-32 ROMs to install.

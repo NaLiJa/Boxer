@@ -19,7 +19,7 @@ typedef NS_ERROR_ENUM(BXCDImageImportErrorDomain, BXCDImageImportErrors) {
 };
 
 
-/// BXCDImageImport rips physical CDs to (CDR-format) ISO disc images using OS X's hdiutil.
+/// `BXCDImageImport` rips physical CDs to (CDR-format) ISO disc images using macOS' hdiutil.
 @interface BXCDImageImport : ADBTaskOperation <BXDriveImport>
 
 @property (atomic) unsigned long long numBytes;

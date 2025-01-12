@@ -103,7 +103,7 @@ NS_ENUM(NSInteger) {
 #pragma mark Methods
 
 /// Whether to show or suppress drive notifications.
-/// This will return NO if the Drives Inspector panel is open.
+/// This will return `NO` if the Drives Inspector panel is open.
 - (BOOL) shouldShowDriveNotifications;
 
 - (void) showDriveAddedBezelForDrive: (BXDrive *)drive;

@@ -8,7 +8,7 @@
 
 #import "BXDrive.h"
 
-/// \c BXDriveSerialization extends BXDrive with support for encoding and decoding from keyed archives.
+/// \c BXDriveSerialization extends `BXDrive` with support for encoding and decoding from keyed archives.
 /// This is used for remembering mounted drives across sessions.
 @interface BXDrive (BXDriveArchiving) <NSSecureCoding>
 

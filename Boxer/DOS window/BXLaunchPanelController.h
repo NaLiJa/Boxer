@@ -38,7 +38,7 @@
 
 - (IBAction) enterSearchText: (NSSearchField *)sender;
 
-/// Called by \c BXDOSWindowController when it is about to switch to/away from the launcher panel.
+/// Called by `BXDOSWindowController` when it is about to switch to/away from the launcher panel.
 /// Causes it to (re-)populate its program list.
 - (void) willShowPanel;
 - (void) didHidePanel;
@@ -59,13 +59,15 @@
 @interface BXLauncherItem : BXCollectionItem
 @property (weak, nonatomic) IBOutlet id <BXLauncherItemDelegate> delegate;
 @property (assign, nonatomic, getter=isLaunchable) BOOL launchable;
-@property (strong, atomic) IBOutlet NSMenu *menu; //The context menu to display for this item.
+/// The context menu to display for this item.
+@property (strong, atomic) IBOutlet NSMenu *menu;
 
 - (IBAction) openItemInDOS: (id)sender;
 - (IBAction) revealItemInFinder: (id)sender;
 - (IBAction) removeItem: (id)sender;
 
 /// Returns the menu which the specified view should display when right-clicked.
+///
 /// Allows the launcher item to customise the menu based on the contents of its represented object.
 - (NSMenu *) menuForView: (BXLauncherItemView *)view;
 @end

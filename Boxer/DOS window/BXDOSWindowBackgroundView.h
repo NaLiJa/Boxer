@@ -7,7 +7,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-/// BXDOSWindowBackgroundView simply renders the badged grey gradient background of the DOS window.
+/// `BXDOSWindowBackgroundView` simply renders the badged grey gradient background of the DOS window.
 @interface BXDOSWindowBackgroundView : NSView
 @end
 

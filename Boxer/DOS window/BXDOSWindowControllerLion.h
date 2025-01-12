@@ -8,7 +8,7 @@
 
 #import "BXDOSWindowController.h"
 
-/// \c BXDOSWindowControllerLion is a subclass of \c BXDOSWindowController that implements Lion's
+/// `BXDOSWindowControllerLion` is a subclass of `BXDOSWindowController` that implements Lion's
 /// new fullscreen and window restoration APIs.
 @interface BXDOSWindowControllerLion : BXDOSWindowController
 {
