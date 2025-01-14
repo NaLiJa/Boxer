@@ -3,12 +3,18 @@
   "strings" : {
     "910.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Cmd-click to lock the mouse to the window.\"; ObjectID = \"910\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kombinací Cmd+kliknutí uzamknete kurzor myši v okně."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cmd-click to lock the mouse to the window."
           }
         },
         "fr" : {
@@ -27,12 +33,18 @@
     },
     "1188.title" : {
       "comment" : "Class = \"NSButtonCell\"; title = \"Launch Program\"; ObjectID = \"1188\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spustit program"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Launch Program"
           }
         },
         "fr" : {

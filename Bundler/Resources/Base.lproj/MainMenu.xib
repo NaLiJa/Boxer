@@ -716,7 +716,7 @@
                         </textFieldCell>
                     </textField>
                     <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="941">
-                        <rect key="frame" x="175" y="497" width="253" height="22"/>
+                        <rect key="frame" x="175" y="497" width="157" height="22"/>
                         <pathCell key="cell" controlSize="small" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="978">
                             <font key="font" metaFont="system"/>
                             <url key="url" string="file://localhost/Applications/"/>
@@ -804,10 +804,7 @@
                         </textFieldCell>
                     </textField>
                     <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="946">
-                        <rect key="frame" x="472" y="499" width="111" height="17"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="107" id="tWd-MO-JOM"/>
-                        </constraints>
+                        <rect key="frame" x="474" y="499" width="106" height="17"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Application Icon:" id="973">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -958,7 +955,7 @@
                                                 <binding destination="855" name="value" keyPath="arrangedObjects.title" id="996"/>
                                             </connections>
                                         </tableColumn>
-                                        <tableColumn identifier="URL" width="374" minWidth="40" maxWidth="1000" id="962">
+                                        <tableColumn identifier="URL" width="345" minWidth="40" maxWidth="1000" id="962">
                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Help link URL">
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
@@ -1108,13 +1105,14 @@
                     <constraint firstItem="947" firstAttribute="trailing" secondItem="955" secondAttribute="trailing" id="3uW-GC-sXF"/>
                     <constraint firstItem="949" firstAttribute="firstBaseline" secondItem="938" secondAttribute="firstBaseline" id="5vV-a4-pdc"/>
                     <constraint firstItem="940" firstAttribute="baseline" secondItem="950" secondAttribute="baseline" id="70x-cd-4x6"/>
+                    <constraint firstItem="946" firstAttribute="leading" secondItem="953" secondAttribute="leading" id="7Ms-JE-d3J"/>
                     <constraint firstItem="953" firstAttribute="top" secondItem="946" secondAttribute="bottom" constant="14" id="7kA-GA-fs7"/>
                     <constraint firstItem="947" firstAttribute="top" secondItem="950" secondAttribute="bottom" constant="10" symbolic="YES" id="7xQ-tU-8W4"/>
                     <constraint firstItem="945" firstAttribute="trailing" secondItem="951" secondAttribute="trailing" id="85p-Df-ija"/>
                     <constraint firstItem="942" firstAttribute="leading" secondItem="1007" secondAttribute="trailing" constant="9" id="99d-UE-jrG"/>
                     <constraint firstItem="1103" firstAttribute="leading" secondItem="950" secondAttribute="leading" id="9cW-1h-T0t"/>
                     <constraint firstItem="943" firstAttribute="top" secondItem="953" secondAttribute="top" id="BST-B9-vvK"/>
-                    <constraint firstAttribute="trailing" secondItem="946" secondAttribute="trailing" constant="63" id="CRx-wm-Fwc"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="946" secondAttribute="trailing" constant="20" symbolic="YES" id="CRx-wm-Fwc"/>
                     <constraint firstItem="938" firstAttribute="leading" secondItem="1061" secondAttribute="leading" id="CYP-th-wAZ"/>
                     <constraint firstItem="941" firstAttribute="leading" secondItem="943" secondAttribute="leading" id="EXd-8y-dU0"/>
                     <constraint firstItem="953" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1061" secondAttribute="trailing" constant="8" symbolic="YES" id="FMz-4D-A2V"/>
@@ -1140,7 +1138,6 @@
                     <constraint firstItem="1096" firstAttribute="leading" secondItem="1063" secondAttribute="leading" id="RpJ-Li-N7l"/>
                     <constraint firstItem="1061" firstAttribute="leading" secondItem="1108" secondAttribute="leading" id="RqX-01-55n"/>
                     <constraint firstItem="950" firstAttribute="leading" secondItem="947" secondAttribute="leading" id="SNM-xp-lbS"/>
-                    <constraint firstItem="946" firstAttribute="leading" secondItem="941" secondAttribute="trailing" constant="49" id="TLq-wZ-Wy7"/>
                     <constraint firstItem="951" firstAttribute="baseline" secondItem="939" secondAttribute="baseline" id="TOD-7c-Qz5"/>
                     <constraint firstItem="956" firstAttribute="firstBaseline" secondItem="947" secondAttribute="firstBaseline" id="Usj-rF-zMk"/>
                     <constraint firstItem="1103" firstAttribute="top" secondItem="1063" secondAttribute="bottom" constant="6" symbolic="YES" id="Wva-NM-Sv5"/>

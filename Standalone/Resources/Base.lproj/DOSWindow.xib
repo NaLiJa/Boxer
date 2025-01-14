@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,7 +26,7 @@
         <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="1" customClass="BXDOSWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <rect key="contentRect" x="400" y="240" width="640" height="506"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
             <view key="contentView" id="2">
                 <rect key="frame" x="0.0" y="0.0" width="640" height="506"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -193,7 +193,7 @@
                 <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1187" customClass="BXStandaloneLaunchPanelButton">
                     <rect key="frame" x="14" y="4" width="452" height="48"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <buttonCell key="cell" type="square" title="Launch Program" bezelStyle="shadowlessSquare" image="NSFollowLinkFreestandingTemplate" imagePosition="right" alignment="left" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="1188" customClass="BXStandaloneLaunchPanelButtonCell">
+                    <buttonCell key="cell" type="square" title="Launch Program" bezelStyle="shadowlessSquare" image="NSFollowLinkFreestandingTemplate" imagePosition="right" alignment="left" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1188" customClass="BXStandaloneLaunchPanelButtonCell">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system" size="20"/>
                     </buttonCell>

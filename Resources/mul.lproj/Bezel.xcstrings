@@ -3,7 +3,7 @@
   "strings" : {
     "6.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Press Cmd+F to exit fullscreen.\\nCmd+click to access the menu bar.\"; ObjectID = \"6\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -13,7 +13,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "Press Cmd+F to exit fullscreen.\nCmd+click to access the menu bar."
           }
         },
@@ -39,7 +39,7 @@
     },
     "9.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[386 speed (3000 cycles)]\"; ObjectID = \"9\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -49,7 +49,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[386 speed (3000 cycles)]"
           }
         },
@@ -75,7 +75,7 @@
     },
     "27.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[100% throttle]\"; ObjectID = \"27\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -85,7 +85,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[100% throttle]"
           }
         },
@@ -111,7 +111,7 @@
     },
     "31.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[Drive D added]\"; ObjectID = \"31\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -121,7 +121,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[Drive D added]"
           }
         },
@@ -147,7 +147,7 @@
     },
     "43.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[Drive D ejected]\"; ObjectID = \"43\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -157,7 +157,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[Drive D ejected]"
           }
         },
@@ -183,7 +183,7 @@
     },
     "47.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[Drive D imported]\"; ObjectID = \"47\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -193,7 +193,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[Drive D imported]"
           }
         },
@@ -219,7 +219,7 @@
     },
     "53.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"This game is not responding\\nto joystick input.\"; ObjectID = \"53\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -229,7 +229,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "This game is not responding\nto joystick input."
           }
         },
@@ -255,7 +255,7 @@
     },
     "56.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"You may need to turn on\\njoystick control within the game.\"; ObjectID = \"56\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -265,7 +265,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "You may need to turn on\njoystick control within the game."
           }
         },
@@ -291,7 +291,7 @@
     },
     "68.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[Need For Speed.iso]\"; ObjectID = \"68\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -301,7 +301,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[Need For Speed.iso]"
           }
         },
@@ -328,7 +328,7 @@
     },
     "70.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[Need For Speed.iso]\"; ObjectID = \"70\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -338,7 +338,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[Need For Speed.iso]"
           }
         },
@@ -365,7 +365,7 @@
     },
     "72.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[Need For Speed.iso]\"; ObjectID = \"72\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -375,7 +375,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[Need For Speed.iso]"
           }
         },
@@ -402,7 +402,7 @@
     },
     "78.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[Drive D swapped]\"; ObjectID = \"78\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -412,7 +412,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[Drive D swapped]"
           }
         },
@@ -439,7 +439,7 @@
     },
     "79.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"[Need For Speed.iso]\"; ObjectID = \"79\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -449,7 +449,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "[Need For Speed.iso]"
           }
         },
@@ -476,7 +476,7 @@
     },
     "87.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"INSERT BUCKAZOID\"; ObjectID = \"87\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -486,7 +486,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "INSERT BUCKAZOID"
           }
         },
@@ -513,7 +513,7 @@
     },
     "92.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"You can add MT-32 ROMs\\nin Boxer’s Audio preferences.\"; ObjectID = \"92\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -523,7 +523,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "You can add MT-32 ROMs\nin Boxer’s Audio preferences."
           }
         },
@@ -549,7 +549,7 @@
     },
     "93.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"MT-32 ROMs are required to play this game’s music correctly.\"; ObjectID = \"93\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -559,7 +559,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "MT-32 ROMs are required to play this game’s music correctly."
           }
         },
@@ -585,7 +585,7 @@
     },
     "100.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Simulated numpad active\"; ObjectID = \"100\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -595,7 +595,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "Simulated numpad active"
           }
         },
@@ -621,7 +621,7 @@
     },
     "108.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Simulated numpad disabled\"; ObjectID = \"108\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -631,7 +631,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "Simulated numpad disabled"
           }
         },
@@ -657,7 +657,7 @@
     },
     "116.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Numlock active\"; ObjectID = \"116\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -667,7 +667,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "Numlock active"
           }
         },
@@ -693,7 +693,7 @@
     },
     "122.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Numlock disabled\"; ObjectID = \"122\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -703,7 +703,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "Numlock disabled"
           }
         },
@@ -729,7 +729,7 @@
     },
     "147.title" : {
       "comment" : "Class = \"NSTextFieldCell\"; title = \"Cmd+click to release the mouse pointer.\"; ObjectID = \"147\";",
-      "extractionState" : "migrated",
+      "extractionState" : "extracted_with_value",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -739,7 +739,7 @@
         },
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "new",
             "value" : "Cmd+click to release the mouse pointer."
           }
         },

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.14"/>
-        <plugIn identifier="com.apple.WebKitIBPlugin" version="14269.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="23504"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,16 +22,16 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="960" y="320" width="340" height="384"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
             <view key="contentView" id="25">
                 <rect key="frame" x="0.0" y="0.0" width="340" height="384"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView id="53">
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53">
                         <rect key="frame" x="0.0" y="0.0" width="340" height="40"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" id="46">
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="46">
                                 <rect key="frame" x="20" y="7" width="146" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="Acknowledgements" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="47">
@@ -42,7 +42,7 @@
                                     <action selector="showAcknowledgements:" target="-2" id="52"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" id="48">
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48">
                                 <rect key="frame" x="174" y="7" width="146" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="Get more games" bezelStyle="texturedRounded" image="NSFollowLinkFreestandingTemplate" imagePosition="right" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="49">
@@ -55,11 +55,11 @@
                             </button>
                         </subviews>
                     </customView>
-                    <customView id="54" customClass="BXStandaloneAboutWindowBackgroundView">
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="54" customClass="BXStandaloneAboutWindowBackgroundView">
                         <rect key="frame" x="0.0" y="40" width="340" height="344"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" id="57" customClass="BXStandaloneAboutLabel">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="57" customClass="BXStandaloneAboutLabel">
                                 <rect key="frame" x="20" y="119" width="300" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="Version [1.2] ([20111031.1])" placeholderString="" id="58">
@@ -92,7 +92,7 @@
                                     </binding>
                                 </connections>
                             </textField>
-                            <textField verticalHuggingPriority="750" id="66" customClass="BXStandaloneAboutLabel">
+                            <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="66" customClass="BXStandaloneAboutLabel">
                                 <rect key="frame" x="20" y="136" width="300" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="truncatingTail" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="[Game name]" placeholderString="" id="67">
@@ -105,12 +105,12 @@
                                     <binding destination="-2" name="fontSize" keyPath="appNameFontSize" id="104"/>
                                 </connections>
                             </textField>
-                            <imageView id="64">
+                            <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="64">
                                 <rect key="frame" x="106" y="173" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSApplicationIcon" id="65"/>
                             </imageView>
-                            <webView maintainsBackForwardList="NO" id="98">
+                            <webView fixedFrame="YES" maintainsBackForwardList="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98">
                                 <rect key="frame" x="0.0" y="0.0" width="340" height="111"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <webPreferences key="preferences" identifier="CreditsView" defaultFontSize="14" defaultFixedFontSize="14" minimumFontSize="0" plugInsEnabled="NO" javaEnabled="NO" javaScriptEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO" loadsImagesAutomatically="NO" allowsAnimatedImages="NO" allowsAnimatedImageLooping="NO"/>
@@ -126,11 +126,12 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="28"/>
             </connections>
+            <point key="canvasLocation" x="48" y="-46"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="62"/>
     </objects>
     <resources>
-        <image name="NSApplicationIcon" width="128" height="128"/>
-        <image name="NSFollowLinkFreestandingTemplate" width="14" height="14"/>
+        <image name="NSApplicationIcon" width="32" height="32"/>
+        <image name="NSFollowLinkFreestandingTemplate" width="20" height="20"/>
     </resources>
 </document>

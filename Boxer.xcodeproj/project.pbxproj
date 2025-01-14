@@ -5254,6 +5254,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone-bundler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -5286,6 +5287,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.washboardabs.boxer-standalone-bundler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -5384,6 +5386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.washboardabs.boxer;
 				PRODUCT_NAME = Boxer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				SWIFT_OBJC_BRIDGING_HEADER = "Boxer/Boxer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
@@ -5431,6 +5434,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.washboardabs.boxer;
 				PRODUCT_NAME = Boxer;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				STRINGS_FILE_OUTPUT_ENCODING = binary;
 				SWIFT_OBJC_BRIDGING_HEADER = "Boxer/Boxer-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
