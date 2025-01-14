@@ -43,7 +43,6 @@
 
 #import "NSWorkspace+ADBFileTypes.h"
 #import "NSWorkspace+ADBMountedVolumes.h"
-#import "NSWorkspace+BXExecutableTypes.h"
 #import "NSFileManager+ADBUniqueFilenames.h"
 #import "NSString+ADBPaths.h"
 #import "NSURL+ADBFilesystemHelpers.h"

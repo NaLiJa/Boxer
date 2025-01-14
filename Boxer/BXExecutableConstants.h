@@ -49,27 +49,27 @@
 /// http://www.fileformat.info/format/exe/corion-mz.htm
 typedef struct {
 	uint16_t typeMarker;				//!< Filetype marker (always "MZ" for executables)
-    uint16_t lastPageSize;			//!< Bytes on last page of file
-    uint16_t numPages;				//!< Pages in file
+    uint16_t lastPageSize;			    //!< Bytes on last page of file
+    uint16_t numPages;				    //!< Pages in file
     uint16_t numRelocations;			//!< Relocations
     uint16_t numHeaderParagraphs;		//!< Size of header in paragraphs
 	uint16_t minExtraParagraphs;		//!< Minimum extra paragraphs needed
 	uint16_t maxExtraParagraphs;		//!< Maximum extra paragraphs needed
     uint16_t ssValue;					//!< Initial (relative) SS value
     uint16_t spValue;					//!< Initial SP value
-    uint16_t checksum;				//!< Checksum
+    uint16_t checksum;				    //!< Checksum
     uint16_t ipValue;					//!< Initial IP value
     uint16_t csValue;					//!< Initial (relative) CS value
     uint16_t relocationTableAddress;	//!< Address of relocation table (always 0x40 for new-style executables)
-    uint16_t overlayNumber;			//!< Overlay number
+    uint16_t overlayNumber;			    //!< Overlay number
 	
 	//The rest of these are part of an extended header present in new-style executables
     uint16_t reserved[4];				//!< Reserved
-    uint16_t oemIdentifier;			//!< OEM identifier (for oemInfo)
+    uint16_t oemIdentifier;			    //!< OEM identifier (for oemInfo)
     uint16_t oemInfo;					//!< OEM info (oemIdentifier-specific)
-    uint16_t reserved2[10];			//!< Reserved
+    uint16_t reserved2[10];			    //!< Reserved
     uint32_t newHeaderAddress;			//!< File address of new exe header
-} __attribute__ ((packed)) BXDOSExecutableHeader;
+} __attribute__((packed)) BXDOSExecutableHeader;
 
 
 //IMPLEMENTATION NOTE: the packed attribute tells GCC not to pad the struct's layout to fit

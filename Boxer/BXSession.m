@@ -28,7 +28,6 @@
 #import "NSWorkspace+ADBFileTypes.h"
 #import "NSString+ADBPaths.h"
 #import "NSURL+ADBFilesystemHelpers.h"
-#import "NSWorkspace+BXExecutableTypes.h"
 #import "BXInputController.h"
 #import "NSObject+ADBPerformExtensions.h"
 #import "NSKeyedArchiver+ADBArchivingAdditions.h"

@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Protocols
 
-/// Represents the interface of @c NSEnumerator as a protocol, for enumeration classes
+/// Represents the interface of `NSEnumerator` as a protocol, for enumeration classes
 /// that don't want to descend directly from NSEnumerator.
 @protocol ADBStepwiseEnumeration <NSFastEnumeration>
 
@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-/// Declare that @c NSEnumerator already conforms to the @c ADBStepwiseEnumeration protocol.
+/// Declare that `NSEnumerator` already conforms to the `ADBStepwiseEnumeration` protocol.
 @interface NSEnumerator (ADBScanningExtensions) <ADBStepwiseEnumeration>
 @end
 
@@ -78,17 +78,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype) initWithRootNodes: (NSArray *)rootNodes;
 
 /// Advances enumeration of the current level and returns the next available node.
-/// Returns @c nil once it reaches the end of the current level.
-/// Called by nextObject.
+/// Returns `nil` once it reaches the end of the current level.
+/// Called by `nextObject`.
 - (nullable id) nextNodeInLevel;
 
 /// Adds the specified nodes as a new level onto the level stack.
-/// Called by nextObject when traversing a node with children.
+/// Called by `nextObject` when traversing a node with children.
 - (void) pushLevel: (NSArray *)nodesInLevel;
 
 /// Removes the last level from the stack, returning iteration to the previous level.
-/// Raises an @c NSRangeException if the enumerator is at the root level.
-/// Called by @c nextObject once the current level is exhausted.
+/// Raises an `NSRangeException` if the enumerator is at the root level.
+/// Called by `nextObject` once the current level is exhausted.
 - (void) popLevel;
 
 /// The current level of depth into the tree. The root nodes are at level 1.
@@ -97,16 +97,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark Methods to implement in subclasses
 
-/// Returns whether the specified node should be returned by nextObject or should be skipped.
+/// Returns whether the specified node should be returned by `nextObject` or should be skipped.
+///
 /// This check applies just to that node and not to its children.
 - (BOOL) shouldEnumerateNode: (id)node;
 
 /// Returns whether enumeration should continue into the specified node's children.
+///
 /// This check will be made (and if successful, child nodes enumerated) even if
-/// @c shouldEnumerateNode: previously returned @c NO for the parent.
+/// `shouldEnumerateNode:` previously returned `NO` for the parent.
 - (BOOL) shouldEnumerateChildrenOfNode: (id)node;
 
-/// Returns the children of the specified node. Return @c nil if the node is a leaf node.
+/// Returns the children of the specified node. Return `nil` if the node is a leaf node.
 - (nullable NSArray *) childrenForNode: (id)node;
 
 @end
@@ -114,20 +116,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - ADBScanningEnumerator
 
-/// Used by ADBScanningEnumerator's @c nextObject method to scan forward through each object
-/// of its inner enumerator. If this block returns an object, enumeration will pause and
-/// <code>ADBScanningEnumerator -nextObject</code> will return that object; if this block returns <code>nil</code>,
+/// Used by ADBScanningEnumerator's `-nextObject` method to scan forward through each object
+/// of its inner enumerator.
+///
+/// If this block returns an object, enumeration will pause and
+/// `-[ADBScanningEnumerator nextObject]` will return that object; if this block returns `nil`,
 /// enumeration of the inner enumerator will continue.
-/// @c scannedObject is the next object from the inner enumerator; @c stop is a boolean reference
-/// which, if set to YES, will halt enumeration after the current object.
+/// `scannedObject` is the next object from the inner enumerator; `stop` is a boolean reference
+/// which, if set to `YES`, will halt enumeration after the current object.
 typedef id __nullable (^ADBScanCallback)(id scannedObject, BOOL *stop);
 
 
 /// An enumerator that scans forwards through an inner enumerator,
-/// passing each enumerated object to an @c ADBScanCallback block and returning
+/// passing each enumerated object to an `ADBScanCallback` block and returning
 /// an object only when the block itself produces an object. This is intended
 /// as a generic way to provide 'pre-filtered' enumerator objects without
-/// the need for @c NSEnumerator subclasses.
+/// the need for `NSEnumerator` subclasses.
 @interface ADBScanningEnumerator : NSEnumerator
 {
     id <ADBStepwiseEnumeration> _innerEnumerator;
@@ -145,9 +149,10 @@ typedef id __nullable (^ADBScanCallback)(id scannedObject, BOOL *stop);
 #pragma mark - ADBEnumeratorChain
 
 /// An enumerator that chains several enumerators together, moving on to the next one once one is exhausted.
+///
 /// This retains the enumerators and releases each one as it is exhausted.
-/// This can chain objects that conform to the @c ADBStepwiseEnumeration protocol themselves, or that respond
-/// to an @c objectEnumerator message.
+/// This can chain objects that conform to the `ADBStepwiseEnumeration` protocol themselves, or that respond
+/// to an `objectEnumerator` message.
 @interface ADBEnumeratorChain : NSEnumerator
 {
     NSMutableArray *_enumerators;
@@ -158,7 +163,7 @@ typedef id __nullable (^ADBScanCallback)(id scannedObject, BOOL *stop);
 - (instancetype) initWithEnumerators: (NSArray *)enumerators;
 
 /// Adds another enumerator onto the end of the chain. This will raise an assertion if the specified object
-/// neither conforms to the @c ADBStepwiseEnumeration protocol nor responds to an @c objectEnumerator message.
+/// neither conforms to the `ADBStepwiseEnumeration` protocol nor responds to an `objectEnumerator` message.
 - (void) addEnumerator: (id)enumerator;
 
 @end

@@ -9,7 +9,6 @@
 #import "BXImportSession+BXImportPolicies.h"
 
 #import "NSWorkspace+ADBFileTypes.h"
-#import "NSWorkspace+BXExecutableTypes.h"
 #import "NSWorkspace+ADBMountedVolumes.h"
 #import "NSString+ADBPaths.h"
 #import "BXFileTypes.h"
@@ -75,7 +74,7 @@
         
         if ([_workspace file: fullPath matchesTypes: executableTypes])
         {
-            if ([_workspace isCompatibleExecutableAtPath: fullPath error: NULL])
+			if ([BXFileTypes isCompatibleExecutableAtURL: [NSURL fileURLWithPath: fullPath] error: NULL])
             {
                 [self addDOSExecutable: relativePath];
                 

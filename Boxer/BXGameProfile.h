@@ -69,31 +69,31 @@ extern NSString * const BXGenericProfileIdentifier;
 @property (assign, nonatomic) NSInteger requiredDiskSpace;
 
 /// Whether the game requires a CD-ROM drive to be present in order to start up.
-/// If <code>YES</code>, then Boxer will mount a dummy CD-ROM if no other CDs are present.
-/// Defaults to <code>NO</code>.
+/// If `YES`, then Boxer will mount a dummy CD-ROM if no other CDs are present.
+/// Defaults to `NO`.
 @property (assign, nonatomic) BOOL requiresCDROM;
 
-/// Whether to mount the \b X and \b Y helper drives while importing this game.
+/// Whether to mount the **X** and **Y** helper drives while importing this game.
 /// These drives can confuse the installers for some games,
 /// e.g. making them offer the wrong default destination drive.
-/// Defaults to <code>YES</code>.
+/// Defaults to `YES`.
 @property (assign, nonatomic) BOOL shouldMountHelperDrivesDuringImport;
 
-/// Whether to mount the \b X drive at all when running this game.
+/// Whether to mount the **X** drive at all when running this game.
 /// Certain games misinterpret the TMP and TEMP variables and need this disabled.
-/// Defaults to <code>YES</code>.
+/// Defaults to `YES`.
 @property (assign, nonatomic) BOOL shouldMountTempDrive;
 
 /// The recommended path on drive C into which to import the game files
 /// when importing an already-installed copy of this game.
-/// Will be @"" if the root folder should be used, or nil if no particular path
+/// Will be @"" if the root folder should be used, or `nil` if no particular path
 /// is recommended.
 @property (copy, nonatomic, nullable) NSString *preferredInstallationFolderPath;
 
 /// The type of media upon which this game was likely released: currently this
 /// is used only for deciding on cover art, not for emulation decisions.
 /// (See sourceDriveType above, which does affect how the game is installed.)
-/// Defaults to <code>BXUnknownMedium</code>.
+/// Defaults to `BXUnknownMedium`.
 @property (assign, nonatomic) BXReleaseMedium releaseMedium;
 
 /// If a DOSBox configuration file is bundled with a game we're importing,
@@ -113,11 +113,11 @@ extern NSString * const BXGenericProfileIdentifier;
 @property (class, readonly, copy) NSString *catalogueVersion;
 
 /// Returns an array of generic profiles that match multiple games.
-/// This corresponds the contents of the BXGenericProfiles key in GameProfiles.plist.
+/// This corresponds the contents of the *BXGenericProfiles* key in *GameProfiles.plist*.
 @property (class, readonly, copy) NSArray<NSDictionary<NSString*,id>*> *genericProfiles;
 
 /// Returns an array of game profiles identifying specific games.
-/// This corresponds the contents of the BXSpecificGameProfiles key in GameProfiles.plist.
+/// This corresponds the contents of the *BXSpecificGameProfiles* key in *GameProfiles.plist*.
 @property (class, readonly, copy) NSArray<NSDictionary<NSString*,id>*> *specificGameProfiles;
 
 /// Returns the kind of distribution medium (CD-ROM, floppy) that the contents of the specified
@@ -136,7 +136,7 @@ extern NSString * const BXGenericProfileIdentifier;
 - (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 /// Returns the game profile matching the specified identifier,
-/// or \c nil if no such profile was found.
+/// or `nil` if no such profile was found.
 + (nullable instancetype) profileWithIdentifier: (NSString *)identifier;
 
 /// Creates a new profile from the specified GameProfiles.plist-format dictionary.
@@ -146,14 +146,14 @@ extern NSString * const BXGenericProfileIdentifier;
 /// Detects and returns an appropriate game profile for the specified path,
 /// by scanning for telltale files in the file hierarchy starting at basePath.
 /// Will return nil if no profile could be found.
-/// If \c searchSubfolders is <code>NO</code>, only the base path will be scanned without
+/// If `searchSubfolders` is `NO`, only the base path will be scanned without
 /// recursing into subfolders.
 + (nullable instancetype) detectedProfileForPath: (NSString *)basePath
                                 searchSubfolders: (BOOL) searchSubfolders;
 
 /// Returns the profile whose telltales match the specified path, or nil if no matching profile
 /// is found. This checks only the specified path and does not perform any recursion of directories.
-/// Used internally by \c profilesDetectedInContentsOfEnumerator: and <code>profileScanWithEnumerator:</code>.
+/// Used internally by `profilesDetectedInContentsOfEnumerator:` and `profileScanWithEnumerator:`.
 + (nullable instancetype) profileMatchingPath: (NSString *)basePath
                                  inFilesystem: (id <ADBFilesystemPathAccess>)filesystem;
 

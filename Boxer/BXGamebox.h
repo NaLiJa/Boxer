@@ -22,9 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 extern NSErrorDomain const BXGameboxErrorDomain;
 typedef NS_ERROR_ENUM(BXGameboxErrorDomain, BXLauncherErrors) {
-	BXLauncherURLOutsideGameboxError,   //!< Attempted to set gamebox's target path to a location outside the gamebox
-    BXGameboxLockedGameboxError,        //!< Attempted a mutation operation that was not possible because the gamebox is locked
-    BXDocumentationNotInFolderError,    //!< Attempted a destructive documentation operation on a URL that was not within the gamebox's documentation folder
+    //! Attempted to set gamebox's target path to a location outside the gamebox
+    BXLauncherURLOutsideGameboxError,
+    //! Attempted a mutation operation that was not possible because the gamebox is locked
+    BXGameboxLockedGameboxError,
+    //! Attempted a destructive documentation operation on a URL that was not within the gamebox's documentation folder
+    BXDocumentationNotInFolderError,
+    //! Deprecated, use `BXLauncherURLOutsideGameboxError` instead.
     BXTargetPathOutsideGameboxError = BXLauncherURLOutsideGameboxError,
 };
 
@@ -43,11 +47,11 @@ extern NSString * const BXGameIdentifierTypeGameInfoKey;
 extern NSString * const BXTargetProgramGameInfoKey;
 
 /// The gameInfo key under which we store an array of launcher shortcuts.
-/// Each entry in the array is an @c NSDictionary whose keys are listed under
+/// Each entry in the array is an `NSDictionary` whose keys are listed under
 /// "Launcher dictionary constants".
 extern NSString * const BXLaunchersGameInfoKey;
 
-/// The gameInfo key under which we store the close-on-exit toggle flag as an @c NSNumber
+/// The gameInfo key under which we store the close-on-exit toggle flag as an `NSNumber`.
 extern NSString * const BXCloseOnExitGameInfoKey;
 
 
@@ -61,7 +65,7 @@ extern NSString * const BXLauncherTitleKey;
 extern NSString * const BXLauncherRelativePathKey;
 
 /// The absolute URL of the program for the launcher, resolved from
-/// @c BXLauncherRelativePathKey at launch time.
+/// `BXLauncherRelativePathKey` at launch time.
 ///
 /// Note that in the case of paths located on disk images, this URL may not be
 /// accessible in the DOS filesystem.
@@ -110,7 +114,7 @@ typedef NS_ENUM(NSUInteger, BXGameIdentifierType) {
 #pragma mark - Interface
 
 /// \c BXGamebox represents a single Boxer gamebox and offers methods for retrieving and persisting
-/// bundled drives, configuration files and documentation. It is based on \c NSBundle but does not
+/// bundled drives, configuration files and documentation. It is based on `NSBundle` but does not
 /// require that Boxer gameboxes use any standard OS X bundle folder structure.
 /// (and indeed, gameboxes with an OS X bundle structure haven't been tested.)
 ///
@@ -120,7 +124,7 @@ typedef NS_ENUM(NSUInteger, BXGameIdentifierType) {
 #pragma mark - Properties
 
 /// Returns a dictionary of gamebox metadata loaded from Boxer.plist.
-/// Keys in this dictionary also be retrieved with gameInfoForKey:, and set with setGameInfo:forKey:.
+/// Keys in this dictionary also be retrieved with `gameInfoForKey:`, and set with `setGameInfo:forKey:`.
 @property (readonly, strong, nonatomic, null_resettable) NSDictionary<NSString*,id> *gameInfo;
 
 /// The name of the game, suitable for display. This is the gamebox's filename minus any ".boxer" extension.
@@ -148,18 +152,18 @@ typedef NS_ENUM(NSUInteger, BXGameIdentifierType) {
 @property (nonatomic) BOOL closeOnExit;
 
 /// The cover art image for this gamebox. Will be nil if the gamebox has no custom cover art.
-/// This is stored internally as the gamebox's OS X icon resource.
+/// This is stored internally as the gamebox's macOS icon resource.
 @property (copy, nonatomic, nullable) NSImage *coverArt;
 
 /// Program launchers for this gamebox, displayed as favorites in the launch panel.
 @property (copy, readonly, nonatomic) NSArray<NSMutableDictionary<NSString*,id>*> *launchers;
 
 /// The default launcher for this gamebox, which should be launched the first time the gamebox is run.
-/// This will be @c nil if the gamebox has no default launcher.
+/// This will be `nil` if the gamebox has no default launcher.
 @property (readonly, nonatomic, nullable) NSDictionary<NSString*,id> *defaultLauncher;
 
 /// The index in the launchers array of the default launcher.
-/// Will be @c NSNotFound if no default launcher has been set.
+/// Will be `NSNotFound` if no default launcher has been set.
 @property (nonatomic) NSUInteger defaultLauncherIndex;
 
 /// The delegate from whom we will request an undo manager for undoable operations.
@@ -185,13 +189,13 @@ typedef NS_ENUM(NSUInteger, BXGameIdentifierType) {
 /// Will raise an assertion if URL does not point to a location within the gamebox.
 - (void) insertLauncherWithURL: (NSURL *)URL
                      arguments: (nullable NSString *)launchArguments
-                         title: (NSString *)title
+                         title: (nullable NSString *)title
                        atIndex: (NSUInteger)index;
 
 /// Same as above, but adds the launcher item at the end of the list.
 - (void) addLauncherWithURL: (NSURL *)URL
                   arguments: (nullable NSString *)launchArguments
-                      title: (NSString *)title;
+                      title: (nullable NSString *)title;
 
 /// Remove the specified launcher item from the launchers array.
 - (void) removeLauncher: (NSDictionary<NSString*,id> *)launcher;
