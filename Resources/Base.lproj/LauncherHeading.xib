@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,11 +18,11 @@
             <rect key="frame" x="0.0" y="0.0" width="640" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <customView id="y4J-Xb-RNt" userLabel="Alignment wrapper">
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y4J-Xb-RNt" userLabel="Alignment wrapper">
                     <rect key="frame" x="0.0" y="2" width="640" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="vPB-9b-cSm" customClass="BXThemedLabel">
+                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPB-9b-cSm" customClass="BXThemedLabel">
                             <rect key="frame" x="128" y="12" width="455" height="19"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="HEADING TITLE" id="s4w-YF-J1z">
@@ -37,7 +37,7 @@
                                 <binding destination="-2" name="value" keyPath="representedObject.title.uppercaseString" id="boU-6E-QO0"/>
                             </connections>
                         </textField>
-                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fT8-4W-nrU">
+                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fT8-4W-nrU">
                             <rect key="frame" x="99" y="10" width="24" height="24"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HardDiskTemplate" id="i1m-Na-c3k" customClass="BXThemedImageCell">
@@ -49,7 +49,7 @@
                                 <binding destination="-2" name="value" keyPath="representedObject.icon" id="8N1-ZQ-bzV"/>
                             </connections>
                         </imageView>
-                        <imageView id="w0u-7G-bbz">
+                        <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w0u-7G-bbz">
                             <rect key="frame" x="20" y="2" width="600" height="4"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="axesIndependently" image="LaunchPanelDivider" id="sFr-OM-S6z"/>
@@ -60,6 +60,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="hN5-bI-Vql"/>
             </connections>
+            <point key="canvasLocation" x="48" y="-36"/>
         </view>
         <menu id="aOK-Mz-ET1">
             <items>
@@ -76,6 +77,7 @@
                     </connections>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="48" y="-150"/>
         </menu>
     </objects>
     <resources>

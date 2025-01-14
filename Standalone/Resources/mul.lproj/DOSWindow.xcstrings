@@ -1,0 +1,54 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "910.title" : {
+      "comment" : "Class = \"NSTextFieldCell\"; title = \"Cmd-click to lock the mouse to the window.\"; ObjectID = \"910\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kombinací Cmd+kliknutí uzamknete kurzor myši v okně."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cmd-clic pour verrouiller la souris dans la fenêtre."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cmd-click to lock the mouse to the window."
+          }
+        }
+      }
+    },
+    "1188.title" : {
+      "comment" : "Class = \"NSButtonCell\"; title = \"Launch Program\"; ObjectID = \"1188\";",
+      "extractionState" : "migrated",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spustit program"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lancer le programme"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Launch Program"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

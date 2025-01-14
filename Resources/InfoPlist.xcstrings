@@ -1,6 +1,57 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Boxer disk bundle" : {
+
+    },
+    "Boxer game state" : {
+
+    },
+    "Boxer gamebox" : {
+
+    },
+    "Boxer mountable folder" : {
+
+    },
+    "CD-ROM bundle" : {
+
+    },
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Boxer"
+          }
+        }
+      }
+    },
+    "Configuration file" : {
+
+    },
+    "Disc image cue-sheet" : {
+
+    },
+    "GOG.com disc image" : {
+
+    },
+    "Microsoft MS-DOS application" : {
+
+    },
+    "Microsoft Windows/MS-DOS batch file" : {
+
+    },
+    "MS-DOS CD-ROM" : {
+
+    },
+    "MS-DOS floppy disk" : {
+
+    },
+    "MS-DOS hard disk" : {
+
+    },
     "NSHumanReadableCopyright" : {
       "comment" : "The copyright notice displayed for the application in Finder's Get Info window.",
       "extractionState" : "manual",
@@ -36,6 +87,12 @@
           }
         }
       }
+    },
+    "VirtualPC floppy disk image" : {
+
+    },
+    "WinImage raw disk image" : {
+
     }
   },
   "version" : "1.0"

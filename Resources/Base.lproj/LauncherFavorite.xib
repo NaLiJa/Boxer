@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14269.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,11 +18,11 @@
             <rect key="frame" x="0.0" y="0.0" width="640" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             <subviews>
-                <customView id="Nbx-yy-X0B" userLabel="Alignment wrapper">
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nbx-yy-X0B" userLabel="Alignment wrapper">
                     <rect key="frame" x="0.0" y="0.0" width="640" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="IMn-H7-bhd" customClass="BXThemedLabel">
+                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMn-H7-bhd" customClass="BXThemedLabel">
                             <rect key="frame" x="128" y="19" width="494" height="17"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Program Title" id="h5A-l9-LVB">
@@ -37,7 +37,7 @@
                                 <binding destination="-2" name="value" keyPath="representedObject.title" id="4TC-DY-rrU"/>
                             </connections>
                         </textField>
-                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="afD-Z6-pBD" customClass="BXThemedLabel">
+                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="afD-Z6-pBD" customClass="BXThemedLabel">
                             <rect key="frame" x="128" y="0.0" width="494" height="17"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <textFieldCell key="cell" lineBreakMode="truncatingHead" sendsActionOnEndEditing="YES" title="C:\PATH\TO\PROGRAM.EXE" id="kin-gu-pYe">
@@ -67,6 +67,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="cdP-Mv-TdP"/>
             </connections>
+            <point key="canvasLocation" x="48" y="-36"/>
         </view>
         <menu id="4B6-tN-sOE">
             <items>
@@ -89,6 +90,7 @@
                     </connections>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="48" y="68"/>
         </menu>
     </objects>
 </document>
